@@ -2,7 +2,6 @@ import React, { useEffect, useState, useRef} from 'react'
 import ChatBar from './ChatBar'
 import ChatBody from './ChatBody'
 import ChatFooter from './ChatFooter'
-import Footer from './Footer'
 
 const ChatPage = ({socket}) => { 
   const [messages, setMessages] = useState([])
