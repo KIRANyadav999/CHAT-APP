@@ -5,11 +5,13 @@ const http = require('http').Server(app);
 const PORT = 4000
 const socketIO = require('socket.io')(http, {
     cors: {
-        origin: "http://localhost:3000"
+      origin: ["http://localhost:3000", "https://chat-app-socketio00.netlify.app"]
     }
 });
 
-app.use(cors())
+app.use(cors({
+  origin: ["http://localhost:3000", "https://chat-app-socketio00.netlify.app"]
+}));
 let users = []
 
 socketIO.on('connection', (socket) => {
