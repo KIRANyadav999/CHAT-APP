@@ -11,7 +11,7 @@ const socketIO = require('socket.io')(http, {
 
 app.use(cors({
   origin: ["http://localhost:3000", "https://chat-app-socketio00.netlify.app"]
-}));
+})); 
 let users = []
 
 socketIO.on('connection', (socket) => {
