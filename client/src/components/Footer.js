@@ -1,17 +1,10 @@
-"use client";
-
-import { Footer } from "flowbite-react";
-
-export default function Component() {
+import React from 'react'; 
+const Footer = () => {
   return (
-    <Footer container className="foot-bar">
-      <Footer.Copyright href="#" by=" Kiran™ " year={2024} />
-      {/*<Footer.LinkGroup>
-        <Footer.Link href="#">About</Footer.Link>
-        <Footer.Link href="#">Privacy Policy</Footer.Link>
-        <Footer.Link href="#">Licensing</Footer.Link>
-  <Footer.Link href="#">Contact</Footer.Link>
-      </Footer.LinkGroup>*/}
-    </Footer>
+    <footer className="absolute bottom-4 text-gray-500 text-sm">
+      <p>Kiran™ &copy; 2025</p>
+    </footer>
   );
-} 
+};
+
+export default Footer;
