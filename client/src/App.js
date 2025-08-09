@@ -1,4 +1,5 @@
-import {BrowserRouter, Routes, Route} from "react-router-dom"
+import React, { useState, useEffect, useRef } from 'react';
+import {BrowserRouter, Routes, Route, useNavigate} from "react-router-dom"
 import Home from "./components/Home"
 import ChatPage from "./components/ChatPage";
 import socketIO from "socket.io-client"
@@ -9,12 +10,11 @@ function App() {
     <BrowserRouter>
         <div>
           <Routes>
-            <Route path="/" element={<Home socket={socket}/>}></Route>
-            <Route path="/chat" element={<ChatPage socket={socket}/>}></Route>
+            <Route path="/" element={<Home socket={socket} />} />
+            <Route path="/chat" element={<ChatPage socket={socket} />} />
           </Routes>
-    </div>
+        </div>
     </BrowserRouter>
-    
   );
 }
 
